@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}login{% endblock %}
+
+{% block content %}
+
+<p>Вы вышли!</p>
+
+<a href="{% url 'login'%}" style="text-decoration: none">Нажмите здесь, чтобы войти снова.</a>
+
+{% endblock %}

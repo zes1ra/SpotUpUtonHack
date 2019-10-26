@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Добавить{% endblock %}
+
+{% block content %}
+
+<h3 class="text-center">Редактирование профиля</h3>
+<div style="padding: 0 300px">
+    <hr>
+    <h6>* Поля обязательного заполнения</h6>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-outline-warning btn-lg my-2 my-sm-0 shadow" type="submit">Сохранить изменения</button>
+        <button class="btn btn-outline-success btn-lg my-2 my-sm-0 shadow" type="button" onclick="history.back()">
+            Я передумал
+        </button>
+    </form>
+</div>
+{% endblock %}
