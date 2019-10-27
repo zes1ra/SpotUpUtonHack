@@ -8,7 +8,7 @@
 
           <form v-if="this.$root.$data.loading === false" class="margin-sm" @submit.stop.prevent="handleSubmit">
             <div class="border-style">
-              <b-form-file plain @change="captureFile"/>
+              <b-form-file accept="image/*" @change="captureFile"/>
             </div>
             <b-form-textarea
               v-model="caption"
@@ -162,8 +162,8 @@ export default {
 }
 
 .card img {
-  object-fit: cover;
-  height: 500px;
+  /*object-fit: cover;*/
+  /*height: 500px;*/
   width: 500px;
 }
 
